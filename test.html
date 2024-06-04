@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./View/Css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="tab" style="margin-bottom: 30px; margin-top: 30px;">
+      <button class="tablinks" onclick="openCity(event, 'cart')">Giỏ hàng của bạn</button>
+      <button class="tablinks" onclick="openCity(event, 'myBill')">Đơn hàng của bạn</button>
+      <button class="tablinks" onclick="openCity(event, 'history')">Lịch sử đặt hàng</button>
+    </div>
+
+    <div class="wrapper">
+      <div id="cart" class="tabcontent">
+        <div class="container_wrapper">
+          <div class="wrapper_cart">
+            <div class="cart_img">
+              <img src="./View/Img/BookIT.jpg" alt="">
+            </div>
+            <div class="cart_name">
+              <h3>Tớ học lập trình - làm quen với lập trình</h3>
+              <p>85.000 VND</p>
+            </div>
+            <div class="cart_quantity">
+              <button onclick="decrease()">-</button>
+              <input type="text" id="quantity" value="1" readonly>
+              <button onclick="increase()">+</button>
+            </div>
+            <div class="cart_total-price">
+              <p>170.000 VND</p>
+            </div>
+            <div class="cart_del">
+              <a href="">Xóa</a>
+            </div>
+          </div>
+          <div class="wrapper_cart">
+            <div class="cart_img">
+              <img src="./View/Img/BookIT.jpg" alt="">
+            </div>
+            <div class="cart_name">
+              <h3>Tớ học lập trình - làm quen với lập trình</h3>
+              <p>85.000 VND</p>
+            </div>
+            <div class="cart_quantity">
+              <button onclick="decrease()">-</button>
+              <input type="text" id="quantity" value="1" readonly>
+              <button onclick="increase()">+</button>
+            </div>
+            <div class="cart_total-price">
+              <p>170.000 VND</p>
+            </div>
+            <div class="cart_del">
+              <a href="">Xóa</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="myBill" class="tabcontent">
+        <div class="container_wrapper">
+          <div class="wrapper_cart">
+            <div class="cart_img">
+              <img src="./View/Img/BookIT.jpg" alt="">
+            </div>
+            <div class="cart_name">
+              <h3>Tớ học lập trình - làm quen với lập trình</h3>
+              <p>85.000 VND</p>
+            </div>
+            <div class="cart_quantity">
+              <input type="text" id="quantity" value="1" readonly>
+            </div>
+            <div class="cart_total-price">
+              <p>170.000 VND</p>
+            </div>
+            <div class="cart_status">
+              <p>Đang xử lý</p>
+              <div class="cart_del-icon">
+                <i class="fa-solid fa-trash"></i>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="cart_time" style="margin-bottom: 20px;">
+          <p>(08/11/2023 - 10:32 am)</p>
+          <h6>Tổng tiên: 197.000 VND</h6>
+        </div>
+        <div id="bill_comfirm">
+          <div class="container_wrapper">
+            <div class="wrapper_cart">
+              <div class="cart_img">
+                <img src="./View/Img/BookIT.jpg" alt="">
+              </div>
+              <div class="cart_name">
+                <h3>Tớ học lập trình - làm quen với lập trình</h3>
+                <p>85.000 VND</p>
+              </div>
+              <div class="cart_quantity">
+                <input type="text" id="quantity" value="1" readonly>
+              </div>
+              <div class="cart_total-price">
+                <p>170.000 VND</p>
+              </div>
+              <div class="cart_status">
+                <p>Đã xác nhận</p>
+              </div>
+            </div>
+            <div class="wrapper_cart">
+              <div class="cart_img">
+                <img src="./View/Img/BookIT.jpg" alt="">
+              </div>
+              <div class="cart_name">
+                <h3>Tớ học lập trình - làm quen với lập trình</h3>
+                <p>85.000 VND</p>
+              </div>
+              <div class="cart_quantity">
+                <input type="text" id="quantity" value="1" readonly>
+              </div>
+              <div class="cart_total-price">
+                <p>170.000 VND</p>
+              </div>
+              <div class="cart_status" style="opacity: 0;">
+                <p>Đang xử lý</p>
+              </div>
+            </div>
+          </div>
+          <div class="cart_time">
+            <p>(08/11/2023 - 10:32 am)</p>
+            <h6>Tổng tiên: 197.000 VND</h6>
+          </div>
+        </div>
+      </div>
+      <div id="history" class="tabcontent">
+        <div id="bill_comfirm">
+          <div class="container_wrapper">
+            <div class="wrapper_cart">
+              <div class="cart_img">
+                <img src="./View/Img/BookIT.jpg" alt="">
+              </div>
+              <div class="cart_name">
+                <h3>Tớ học lập trình - làm quen với lập trình</h3>
+                <p>85.000 VND</p>
+              </div>
+              <div class="cart_quantity">
+                <input type="text" id="quantity" value="1" readonly>
+              </div>
+              <div class="cart_total-price">
+                <p>170.000 VND</p>
+              </div>
+              <div class="cart_status">
+                <p style="background-color: green;">Đã xác nhận</p>
+              </div>
+            </div>
+            <div class="wrapper_cart">
+              <div class="cart_img">
+                <img src="./View/Img/BookIT.jpg" alt="">
+              </div>
+              <div class="cart_name">
+                <h3>Tớ học lập trình - làm quen với lập trình</h3>
+                <p>85.000 VND</p>
+              </div>
+              <div class="cart_quantity">
+                <input type="text" id="quantity" value="1" readonly>
+              </div>
+              <div class="cart_total-price">
+                <p>170.000 VND</p>
+              </div>
+              <div class="cart_status" style="opacity: 0;">
+                <p>Đang xử lý</p>
+              </div>
+            </div>
+          </div>
+          <div class="cart_time" style="margin-bottom: 10px;">
+            <p>(08/11/2023 - 10:32 am)</p>
+            <h6>Tổng tiên: 197.000 VND</h6>
+          </div>
+        </div>
+        <div id="bill_cancel">
+          <div class="container_wrapper">
+            <div class="wrapper_cart">
+              <div class="cart_img">
+                <img src="./View/Img/BookIT.jpg" alt="">
+              </div>
+              <div class="cart_name">
+                <h3>Tớ học lập trình - làm quen với lập trình</h3>
+                <p>85.000 VND</p>
+              </div>
+              <div class="cart_quantity">
+                <input type="text" id="quantity" value="1" readonly>
+              </div>
+              <div class="cart_total-price">
+                <p>170.000 VND</p>
+              </div>
+              <div class="cart_status">
+                <p style="cursor: pointer;">Hủy đơn hàng</p>
+              </div>
+            </div>
+            <div class="wrapper_cart">
+              <div class="cart_img">
+                <img src="./View/Img/BookIT.jpg" alt="">
+              </div>
+              <div class="cart_name">
+                <h3>Tớ học lập trình - làm quen với lập trình</h3>
+                <p>85.000 VND</p>
+              </div>
+              <div class="cart_quantity">
+                <input type="text" id="quantity" value="1" readonly>
+              </div>
+              <div class="cart_total-price">
+                <p>170.000 VND</p>
+              </div>
+              <div class="cart_status" style="opacity: 0;">
+                <p>Đang xử lý</p>
+              </div>
+            </div>
+          </div>
+          <div class="cart_time">
+            <p>(08/11/2023 - 10:32 am)</p>
+            <h6>Tổng tiên: 197.000 VND</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    function openCity(evt, cityName) {
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    var counter = 0;
+    var inputElement = document.getElementById("quantity");
+
+    function increase() {
+      counter++;
+      inputElement.value = counter;
+    }
+
+    function decrease() {
+      counter--;
+      inputElement.value = counter;
+    }
+
+  </script>
+
+</body>
+
+</html>
